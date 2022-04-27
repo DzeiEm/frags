@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="frags" customModuleProvider="target">
+            <connections>
+                <outlet property="introductionImage" destination="8gJ-Rx-6T3" id="Yj5-38-GcG"/>
+                <outlet property="introductionMessageTextLabel" destination="pUo-9y-Irw" id="uAT-WT-aN2"/>
+                <outlet property="signUpButtonView" destination="cmN-7v-tYr" id="v57-Xo-UEm"/>
+                <outlet property="signinButtonView" destination="ljM-h4-KlQ" id="wC6-ce-GUx"/>
+                <outlet property="view" destination="iN0-l3-epB" id="oBK-I7-d2c"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bW6-9h-dbf" userLabel="ButtonsStack">
+                    <rect key="frame" x="20" y="772" width="374" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmN-7v-tYr">
+                            <rect key="frame" x="0.0" y="0.0" width="185.5" height="70"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                            <connections>
+                                <action selector="signupButtonTapped:" destination="-1" eventType="touchUpInside" id="95o-0p-EPg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljM-h4-KlQ">
+                            <rect key="frame" x="188.5" y="0.0" width="185.5" height="70"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
+                            <connections>
+                                <action selector="signinButtonTapped:" destination="-1" eventType="touchUpInside" id="7AX-Xv-zJA"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="TLi-kb-jGL"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intro text , bla bla bla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-9y-Irw">
+                    <rect key="frame" x="50" y="701.5" width="314" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="8gJ-Rx-6T3">
+                    <rect key="frame" x="25" y="74" width="364" height="180"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.81966685009999996" green="0.92973682130000002" blue="0.78458777140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pUo-9y-Irw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="0ML-PS-RxM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bW6-9h-dbf" secondAttribute="bottom" constant="20" id="4od-ZG-dkP"/>
+                <constraint firstItem="8gJ-Rx-6T3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="6uz-71-AFd"/>
+                <constraint firstItem="8gJ-Rx-6T3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="Ag6-9q-aUP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bW6-9h-dbf" secondAttribute="trailing" constant="20" id="EAF-ar-GAl"/>
+                <constraint firstItem="bW6-9h-dbf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bPW-x5-2Hj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8gJ-Rx-6T3" secondAttribute="trailing" constant="25" id="flB-p5-hid"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pUo-9y-Irw" secondAttribute="trailing" constant="50" id="gbG-zd-4Fb"/>
+                <constraint firstItem="bW6-9h-dbf" firstAttribute="top" secondItem="pUo-9y-Irw" secondAttribute="bottom" constant="50" id="oLs-6p-jVd"/>
+            </constraints>
+            <point key="canvasLocation" x="-170" y="88"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="eye" width="180" height="180"/>
+    </resources>
+</document>
